@@ -14,13 +14,13 @@ El desarrollo del análisis se organiza en cuatro presentaciones:
 ##### **P1. Análisis exploratorio de datos**
 Se construye una base de datos mensual a partir del API del BCRP, que incluye inflación subyacente, expectativas de inflación, tasas de interés y variables operativas de liquidez. Esta etapa aborda la limpieza, transformación temporal, análisis descriptivo, visualización de tendencias y detección de posibles outliers, interpretados como episodios macroeconómicos relevantes.
 
-##### **TG 2. Formulación del problema supervisado de nowcasting**
+##### **P2 Formulación del problema supervisado de nowcasting**
 Se define un esquema de predicción *one-step-ahead* (h = 1), mediante la creación de rezagos de la inflación, expectativas y variables monetarias. La construcción del dataset respeta estrictamente la causalidad temporal y evita cualquier uso de información futura. Se implementan particiones entrenamiento–prueba y validación cruzada específica para series de tiempo.
 
-##### **TG 3. Modelado y evaluación predictiva**
+##### **P3. Modelado y evaluación predictiva**
 Se estiman y comparan distintos modelos: baselines de persistencia, regresión OLS, Ridge Regression y modelos no lineales (Random Forest y XGBoost). El análisis incorpora diagnósticos econométricos, regularización, métricas de desempeño fuera de muestra (MSE y R²) y comparaciones sistemáticas entre enfoques lineales y no lineales.
 
-##### **TG 4. Análisis causal y modelación no lineal**
+##### **P4. Análisis causal y modelación no lineal**
 Se desarrolla un diagrama causal (DAG) que sintetiza la estructura económica subyacente, diferenciando claramente entre reacción de política monetaria y transmisión rezagada hacia la inflación. Además, se implementa un modelo de redes neuronales tipo MLP como extensión metodológica para explorar posibles no linealidades.
 
 #### Principales resultados
